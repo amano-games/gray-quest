@@ -15,7 +15,6 @@ local function clamp(value, min, max)
 	return math.max(math.min(value, max), min)
 end
 
-
 local function init()
 	pd.display.setRefreshRate(fps)
 end
