@@ -8,7 +8,7 @@ SDK=$(PLAYDATE_SDK_PATH)
 
 SDK_BIN=$(SDK)/bin
 SDK_DISK=$(SDK)/Disk/Games
-GAME=grayscale-adventure
+GAME=gray-quest
 GAME_PATH=$(SDK_DISK)/$(GAME).pdx
 SIM=Playdate Simulator
 

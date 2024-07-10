@@ -1,7 +1,7 @@
-name=Gray Adventure
+name=Gray Quest
 author=Amano
 description=Small test for Playdate grayscale
-bundleID=games.amano.gray-adventure
+bundleID=games.amano.gray-quest
 version=1.0
 buildNumber=0
 imagePath=metadata/
