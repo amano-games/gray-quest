@@ -1,0 +1,23 @@
+{
+  "telemetry.enable": false,
+  "runtime.version": "Lua 5.4",
+  "runtime.special": {
+    "import": "require"
+  },
+  "runtime.nonstandardSymbol": ["+=", "-=", "*=", "/="],
+  "diagnostics.globals": ["playdate"],
+  "Lua.diagnostics.severity": {
+    "duplicate-set-field": "Hint"
+  },
+  "diagnostics.disable": ["redefined-local", "undefined-field", "inject-field"],
+  "diagnostics.neededFileStatus": {
+    "codestyle-check": "Any"
+  },
+  "diagnostics.libraryFiles": "Disable",
+  "completion.callSnippet": "Replace",
+  "workspace.library": [
+    "$PLAYDATE_SDK_PATH/CoreLibs",
+    "$HOME/github/playdate-luacats"
+  ],
+  "workspace.ignoreDir": ["source/external"]
+}

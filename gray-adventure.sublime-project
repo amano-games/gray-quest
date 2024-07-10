@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "LuaFormatter": {
+      "auto_format_on_save": true
+    }
+  },
+  "folders": [
+    {
+      "path": ".",
+      "folder_exclude_patterns": ["*.pdx"]
+    }
+  ],
+  "build_systems": [
+    {
+      "name": "pdc",
+      "shell_cmd": "pdc \"$project_path/source\" \"$project_path/$project_base_name.pdx\" && open \"$project_path/$project_base_name.pdx\"",
+      "file_regex": "^(?:[Ee]rror: )?(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+    }
+  ]
+}
