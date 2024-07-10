@@ -1,0 +1,7 @@
+name=Gray Adventure
+author=Amano
+description=Small test for Playdate grayscale
+bundleID=games.amano.gray-adventure
+version=1.0
+buildNumber=0
+imagePath=metadata/
