@@ -1,30 +1,25 @@
 import "CoreLibs/object"
 import "CoreLibs/graphics"
-import "CoreLibs/sprites"
 import "CoreLibs/timer"
 
 
 local pd <const> = playdate
 local gfx <const> = pd.graphics
 
+local imgs = gfx.imagetable.new("imgs/test")
+assert(imgs)
+
 local function init()
 	pd.display.setRefreshRate(50)
-	local bg_img = gfx.image.new("imgs/bg")
-	assert(bg_img)
-
-	gfx.sprite.setBackgroundDrawingCallback(
-		function()
-			bg_img:draw(0, 0)
-		end
-	)
 end
-
 
 init()
 
-
+local t = 0
 function pd.update()
-	gfx.sprite.update()
+	local frame = (t % 2) + 1
 	pd.timer.updateTimers()
+	imgs:drawImage(frame, 0, 0)
 	pd.drawFPS(0, 0)
+	t += 1
 end
