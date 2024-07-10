@@ -1,6 +1,5 @@
 import "CoreLibs/object"
 import "CoreLibs/graphics"
-import "CoreLibs/timer"
 import "CoreLibs/crank"
 
 
@@ -18,6 +17,7 @@ end
 
 
 local function init()
+	pd.display.setRefreshRate(fps)
 end
 
 init()
@@ -27,12 +27,11 @@ function pd.update()
 	local ticks = pd.getCrankTicks(ticks_per_rev)
 
 	if ticks ~= 0 then
-		fps = clamp(fps + ticks, 20, 50)
+		fps = clamp(fps + ticks, 20, 200)
 		pd.display.setRefreshRate(fps)
 	end
 
 	local frame = (t % 2) + 1
-	pd.timer.updateTimers()
 	imgs:drawImage(frame, 0, 0)
 	pd.drawFPS(0, 0)
 	t += 1
